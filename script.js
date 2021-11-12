@@ -15,22 +15,22 @@ console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((e) => N * e).join(" "));
 // ### Boys & Girls Groups Challenge
 function maxGroup(x, y) {
     let maxNum = 0;
-    if (x > y) {
-        maxNum = x;
-    } else {
-        maxNum = y;
-    }
+    x > y ? (maxNum = x) : (maxNum = y);
+
+    // if (x > y) {
+    //     maxNum = x;
+    // } else {
+    //     maxNum = y;
+    // }
 
     const num = [];
 
     for (let i = 0; i < maxNum; i++) {
-        if (x % i === 0 && y % i === 0) {
-            num.push(i);
-        }
+        if (x % i === 0 && y % i === 0) num.push(i);
     }
     const lastNum = num.slice(-1).pop();
     console.log(lastNum);
     console.log(x / lastNum, y / lastNum);
 }
 
-maxGroup(50, 25);
+maxGroup(15, 5);
