@@ -34,3 +34,17 @@ function maxGroup(x, y) {
 }
 
 maxGroup(15, 5);
+
+/* ------------------------------------------------------------------------------ */
+
+// ### Reverse String
+
+const reverseString = (string) => {
+    let reverseStr = string.split("").reverse().join("");
+
+    for (let i = 0; i < string.length; i++) {
+        console.log(`${string[i]} ${reverseStr[i]}`);
+    }
+};
+
+reverseString("Hello world");
