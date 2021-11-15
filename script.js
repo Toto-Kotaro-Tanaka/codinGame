@@ -11,7 +11,6 @@ N = 34;
 console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((e) => N * e).join(" "));
 
 /* ------------------------------------------------------------------------------ */
-
 // ### Boys & Girls Groups Challenge
 function maxGroup(x, y) {
     let maxNum = 0;
@@ -36,7 +35,6 @@ function maxGroup(x, y) {
 maxGroup(15, 5);
 
 /* ------------------------------------------------------------------------------ */
-
 // ### Reverse String
 
 const reverseString = (string) => {
@@ -48,3 +46,22 @@ const reverseString = (string) => {
 };
 
 reverseString("Hello world");
+
+/* ------------------------------------------------------------------------------ */
+// ### Count Circles
+
+const countCircles = (num) => {
+    let numStr = String(num);
+    let totalCircles = 0;
+
+    for (let i = 0; i < numStr.length; i++) {
+        if (numStr[i] === "0" || numStr[i] === "6" || numStr[i] === "9") {
+            totalCircles += 1;
+        } else if (numStr[i] === "8") {
+            totalCircles += 2;
+        }
+    }
+    return totalCircles;
+};
+
+console.log(countCircles(108923456089));
