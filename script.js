@@ -65,3 +65,12 @@ const countCircles = (num) => {
 };
 
 console.log(countCircles(108923456089));
+
+/* ------------------------------------------------------------------------------ */
+// ### Count a Word
+
+const countWord = function(str, find) {
+    return str.split(find).length - 1;
+};
+
+console.log(countWord("hello world, world wide web world record", "world"));
